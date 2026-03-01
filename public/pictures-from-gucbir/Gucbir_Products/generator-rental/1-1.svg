@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 60px;
+        filter: url(#filter);
+        fill: #fff;
+        font-family: Montserrat;
+        font-weight: 700;
+      }
+    </style>
+    <filter id="filter" x="9" y="4" width="37" height="43" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#eb1c23"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="_1." data-name="1." class="cls-1" x="8.647" y="45.968">1.</text>
+</svg>

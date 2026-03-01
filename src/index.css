@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-primary: #1e3a8a;
+  --color-accent: #dc2626;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans antialiased selection:bg-white selection:text-black;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .nav-link {
+    @apply text-sm uppercase tracking-[0.05em] transition-colors;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-primary/30 rounded-full text-xs uppercase tracking-[0.1em] font-medium text-primary hover:bg-primary hover:text-white transition-all duration-500;
+  }
+  .btn-solid {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-full text-xs uppercase tracking-[0.1em] font-medium hover:bg-primary/90 transition-all duration-500;
+  }
+  .micro-label {
+    @apply text-[11px] uppercase tracking-[0.2em] text-muted font-medium;
+  }
+  .section-padding {
+    @apply py-16 md:py-32;
+  }
+  .border-line {
+    @apply border-t border-border;
+  }
+  .input-field {
+    @apply w-full bg-transparent border-b border-border rounded-none px-0 py-4 text-text focus:outline-none focus:border-primary focus:ring-0 transition-colors placeholder:text-muted/60;
+  }
+}

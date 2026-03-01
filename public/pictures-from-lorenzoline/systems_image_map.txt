@@ -1,0 +1,148 @@
+PAGE: https://lorenzoline.com.tr/en/case/windows/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/lorenzoline-70t-70th-yeni.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/04/lorenzoline-84t-84th-yeni.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+
+PAGE: https://lorenzoline.com.tr/en/case/facade-systems/
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/90US-cephe-sistemleri.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/50F-cephe-sistemleri.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/80US-cephe-sistemleri-1.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+
+PAGE: https://lorenzoline.com.tr/en/case/outdoor-systems-dis-mekan-sistemleri/
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2026/02/bioclimatic-system-02.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/06/24-gs-cam-surme-sistemi-1.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2026/02/145WG-kis-bahce-sistemi-260226-2.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2026/02/rolling-roof-system-26022026-02.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+
+PAGE: https://lorenzoline.com.tr/en/project-support/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/kapi-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/7-atek-adress-izmir.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/03/pencere-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/surme-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/16-tibilisi-gardens-gurcistan-tiflis.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/cephe-sistemleri-22-400x420.jpg
+
+PAGE: https://lorenzoline.com.tr/sistemler/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/kapi-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/lorenzoline-logo-gif-mavi.gif
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/03/pencere-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/surme-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/ofis-bolme-sistemleri-9-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/cephe-sistemleri-22-400x420.jpg
+
+PAGE: https://lorenzoline.com.tr/en/blog-standard/
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/12/kis-bahcesi-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/11/aluminyum-cephe-giydirme-fiyatlari-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/10/kis-bahcesi-faydalari-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/04/aluminyum-surme-pencere-sistemleri-fiyatlari-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/11/kis-bahcesi-sistemleri-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/12/aluminyum-surme-kapi-modelleri-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/11/aluminyum-kupeste-nedir-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/04/aluminyum-pencere-sistemleri-bakimi-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/12/aluminyum-pencere-sistemleri-1-840x575.jpg
+  IMG: https://7oroof.com/tfdemos/lockey/wp-content/uploads/logo.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/10/mustakil-kis-bahcesi-840x575.jpg
+
+PAGE: https://lorenzoline.com.tr/en/winter-garden-system/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2026/02/145WG-kis-bahce-sistemi-260226-2.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/kapi-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/06/pdf-ikon.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/03/pencere-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/surme-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/cephe-sistemleri-22-400x420.jpg
+
+PAGE: https://lorenzoline.com.tr/en/case/office-partition-systems/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+
+PAGE: https://lorenzoline.com.tr/en/case/doors/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/77BF-kapi-sistemi-1.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/84fd-kapi-sistemleri-105.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+
+PAGE: https://lorenzoline.com.tr/en/systems/
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/kapi-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/lorenzoline-logo-gif-mavi.gif
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/03/pencere-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/surme-sistemleri-22-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/ofis-bolme-sistemleri-9-400x420.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/cephe-sistemleri-22-400x420.jpg
+
+PAGE: https://lorenzoline.com.tr/en/case/sliding-systems/
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/70MS-surme-sistemi.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/38sls-kaldir-sur-sistemi-100.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/70ls-surme-sistemi-106.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/51ls-surme-sistemi-103.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+
+PAGE: https://lorenzoline.com.tr/en/
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/12/kis-bahcesi-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/lorenzoline-logo-5.png
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/placeholder/no-image-40x40.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/translatepress-multilingual/assets/images/flags/tr_TR.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/logo-ontop.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/test-avatar1.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/12/aluminyum-pencere-sistemleri-1-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2023/12/telefon-arama-min.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/07/lorenzolinbe-basarili-operasyonlar-5.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/03/pencere-sistemleri-22.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2025/12/aluminyum-surme-kapi-modelleri-3-840x575.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/surme-sistemleri-22.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/kapi-sistemleri-22-400x390.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/themes/lockey/assets/images/language-flags/en_US.png
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/03/pencere-sistemleri-22-400x390.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/surme-sistemleri-22-400x390.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/01/kapi-sistemleri-22.jpg
+  IMG: https://lorenzoline.com.tr/wp-content/uploads/2024/04/kapi-pencere-sistemleri-52.png
+  IMG: https://lorenzoline.com.tr/wp-content/plugins/revslider/public/assets/assets/dummy.png
+

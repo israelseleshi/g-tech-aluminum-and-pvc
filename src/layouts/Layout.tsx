@@ -151,13 +151,13 @@ export function Layout() {
         <div className="hidden md:flex items-center gap-4 lg:gap-8 flex-shrink-0">
           <Link 
             to="/" 
-            className={`nav-link tracking-tighter ${isHomePage ? "text-orange-500 font-bold" : (useWhiteText ? "text-white/90 hover:text-orange-500 font-medium" : "text-primary hover:text-orange-500 font-medium")}`}
+            className={`nav-link tracking-tighter ${isHomePage ? "text-accent font-bold" : (useWhiteText ? "text-white/90 hover:text-accent font-medium" : "text-primary hover:text-accent font-medium")}`}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className={`nav-link tracking-tighter ${location.pathname === '/about' ? "text-orange-500 font-bold" : (useWhiteText ? "text-white/90 hover:text-orange-500 font-medium" : "text-primary hover:text-orange-500 font-medium")}`}
+            className={`nav-link tracking-tighter ${location.pathname === '/about' ? "text-accent font-bold" : (useWhiteText ? "text-white/90 hover:text-accent font-medium" : "text-primary hover:text-accent font-medium")}`}
           >
             About Us
           </Link>
@@ -169,7 +169,7 @@ export function Layout() {
           >
             <Link 
               to="/solutions" 
-              className={`nav-link flex items-center gap-1 tracking-tighter ${location.pathname.startsWith('/solutions') ? "text-orange-500 font-bold" : (useWhiteText ? "text-white/90 hover:text-orange-500 font-medium" : "text-primary hover:text-orange-500 font-medium")}`}
+              className={`nav-link flex items-center gap-1 tracking-tighter ${location.pathname.startsWith('/solutions') ? "text-accent font-bold" : (useWhiteText ? "text-white/90 hover:text-accent font-medium" : "text-primary hover:text-accent font-medium")}`}
               onClick={(e) => {
                 if ('ontouchstart' in window) {
                   e.preventDefault();
@@ -239,7 +239,7 @@ export function Layout() {
           >
             <Link 
               to="/projects" 
-              className={`nav-link flex items-center gap-1 tracking-tighter ${location.pathname.startsWith('/projects') ? "text-orange-500 font-bold" : (useWhiteText ? "text-white/90 hover:text-orange-500 font-medium" : "text-primary hover:text-orange-500 font-medium")}`}
+              className={`nav-link flex items-center gap-1 tracking-tighter ${location.pathname.startsWith('/projects') ? "text-accent font-bold" : (useWhiteText ? "text-white/90 hover:text-accent font-medium" : "text-primary hover:text-accent font-medium")}`}
               onClick={(e) => {
                 if ('ontouchstart' in window) {
                   e.preventDefault();

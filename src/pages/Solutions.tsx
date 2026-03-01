@@ -63,13 +63,13 @@ export function Solutions() {
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 {item.icon}
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 md:mb-8 tracking-tighter">{item.title}</h2>
-              <p className="text-base md:text-lg text-muted mb-8 md:mb-10 leading-relaxed font-medium">{item.description}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-3 md:mb-4 tracking-tighter">{item.title}</h2>
+              <p className="text-base md:text-lg text-muted mb-4 md:mb-6 leading-tight font-medium tracking-tight">{item.description}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-6 md:mb-8">
                 {item.specs.map((spec, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-                    <span className="text-xs md:text-sm font-bold text-primary uppercase tracking-widest">{spec}</span>
+                  <div key={i} className="flex items-center gap-2">
+                    <div className="w-1 h-1 bg-accent rounded-full" />
+                    <span className="text-[10px] md:text-xs font-bold text-primary uppercase tracking-tighter">{spec}</span>
                   </div>
                 ))}
               </div>

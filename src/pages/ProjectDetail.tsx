@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useParams, Link } from 'react-router-dom';
 import { useRef } from 'react';
+import { ChevronRight } from 'lucide-react';
 
 const projectData = {
   1: {
@@ -100,12 +101,12 @@ export function ProjectDetail() {
     return (
         <div ref={containerRef} className="relative overflow-hidden bg-bg min-h-screen">
             {/* Breadcrumbs - Positioned below header, left-aligned, not overlapping title */}
-            <div className="absolute top-28 left-6 md:left-12 z-30">
-                <nav className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-white/60">
+            <div className="absolute top-32 left-6 md:left-12 z-30">
+                <nav className="flex items-center gap-2 text-xs font-black uppercase tracking-tighter text-white/60">
                     <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                    <span>/</span>
+                    <ChevronRight size={12} className="text-white/40" />
                     <Link to="/projects" className="hover:text-white transition-colors">Projects</Link>
-                    <span>/</span>
+                    <ChevronRight size={12} className="text-white/40" />
                     <span className="text-white">{project.title}</span>
                 </nav>
             </div>
@@ -135,11 +136,11 @@ export function ProjectDetail() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <h3 className="text-xs font-black uppercase tracking-widest text-accent">Technical Execution</h3>
+                                <h3 className="text-xs font-black uppercase tracking-tighter text-accent">Technical Execution</h3>
                                 <ul className="space-y-2">
                                     {project.specs.map((spec, i) => (
-                                        <li key={i} className="flex items-center gap-3 font-bold text-primary uppercase text-[11px]">
-                                            {spec}
+                                        <li key={i} className="flex items-center gap-3 font-bold text-primary uppercase text-[11px] tracking-tighter">
+                                            <span className="text-accent">{"->"}</span> {spec}
                                         </li>
                                     ))}
                                 </ul>

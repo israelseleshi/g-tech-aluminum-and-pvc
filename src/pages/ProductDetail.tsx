@@ -26,9 +26,9 @@ const FADE_UP = {
 
 export function ProductDetail() {
   const { productId } = useParams();
-  const product = PRODUCTS[productId as string];
-  const activeProduct = productId ? (PRODUCTS[productId] || Object.values(PRODUCTS).find(p => p.id === productId)) : Object.values(PRODUCTS)[0];
   const [activeTabId, setActiveTabId] = useState(productId || 'lorenzoline-70t');
+  const activeProduct = PRODUCTS[activeTabId] || Object.values(PRODUCTS)[0];
+  const product = PRODUCTS[productId as string];
   const [activeVariant, setActiveVariant] = useState(0);
 
   useEffect(() => {
@@ -266,8 +266,8 @@ export function ProductDetail() {
         <meta property="og:image" content={activeProduct?.heroImage} />
       </Helmet>
       {/* Breadcrumb Navigation - Now at the top with ample space and bigger text */}
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 pt-32 pb-12">
-        <nav className="flex items-center gap-3 text-sm font-black uppercase tracking-tight text-muted/60">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 pt-36 pb-12">
+        <nav className="flex items-center gap-3 text-sm font-black uppercase tracking-tighter text-muted/60">
           <Link to="/" className="hover:text-accent transition-colors">Home</Link>
           <ChevronRight size={14} className="text-muted/40" />
           <Link to="/solutions" className="hover:text-accent transition-colors">Products</Link>
@@ -279,12 +279,14 @@ export function ProductDetail() {
       </div>
 
       {/* Category Tabs (Aluminum only) - Professional Architectural Design */}
-      {activeProduct?.category === 'aluminum' && (
+    {activeProduct?.category === 'aluminum' && (
         <div className="sticky top-20 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
             <div className="flex justify-center">
               <div className="flex gap-4 md:gap-12 overflow-x-auto no-scrollbar py-0">
-                {Object.values(PRODUCTS).filter(p => p.category === 'aluminum').map(p => (
+                {Object.values(PRODUCTS)
+                  .filter(p => p.category === 'aluminum' && p.id !== 'pvc-profiles')
+                  .map(p => (
                   <button
                     key={p.id}
                     onClick={() => setActiveTabId(p.id)}

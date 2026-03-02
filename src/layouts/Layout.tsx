@@ -332,7 +332,7 @@ export function Layout() {
           <div className="flex justify-between items-center text-[13px] font-black uppercase tracking-widest text-primary border-t border-border pt-12">
             <span className="tracking-tighter text-sm"> © 2026 G-TECH ALUMINUM & PVC PRODUCTION PLC</span>
             <div className="flex items-center gap-3">
-              <span className="opacity-100 text-xs">Developed by</span>
+              <span className="opacity-100 text-xs">Powered by</span>
               <div className="relative group/nano">
                 <a href="https://nanocomputingict.com/" target="_blank" rel="noopener noreferrer">
                   <img src="/nano-computing-ict-solutions-logo.png" alt="Nano Computing" className="h-10 w-auto transition-all cursor-pointer hover:scale-110" />

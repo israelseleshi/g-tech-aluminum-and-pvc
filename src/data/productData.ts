@@ -212,9 +212,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'Perkins 110kVA Industrial',
     brand: 'Gucbir',
     description: 'Engineered for reliability, this Perkins-powered generator provides stable backup and prime power for industrial facilities and large commercial buildings.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/perkins/Gucbir-Perkins-Diesel-Generator-100-150--150x150.jpg',
+    heroImage: '/Perkins 110kVA Industrial.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/perkins/Gucbir-Perkins-Diesel-Generator-100-150--150x150.jpg',
+      '/Perkins 110kVA Industrial.png',
       '/pictures-from-gucbir/Gucbir_Products/perkins/Perkins-Diesel-Generator-100-200-150x150.jpg',
       '/pictures-from-gucbir/Gucbir_Products/perkins/Gucbir-Perkins-Diesel-Generator-150x150.jpg',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/GJP110-1-300x180.webp',
@@ -252,9 +252,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'GJB7500 Inverter Series',
     brand: 'Gucbir',
     description: 'Compact, ultra-quiet portable generator perfect for residential backup, mobile clinics, and sensitive electronic equipment.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/portable-generators/01_GJB7500EiS_beyaz-150x150.jpg',
+    heroImage: '/GJB7500 Inverter Series.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/portable-generators/01_GJB7500EiS_beyaz-150x150.jpg',
+      '/GJB7500 Inverter Series.png',
       '/pictures-from-gucbir/Gucbir_Products/portable-generators/03_GJB4000iS_beyaz-150x150.jpg',
       '/pictures-from-gucbir/Gucbir_Products/portable-generators/04_GJB2000iS_beyaz-150x150.jpg',
       '/pictures-from-gucbir/Gucbir_Products/portable-generators/02_GJB7500Ei_beyaz-150x150.jpg',
@@ -286,9 +286,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'Cummins 650kVA Industrial',
     brand: 'Gucbir',
     description: 'Heavy-duty Cummins-powered generator engineered for high-load industrial facilities, with stable voltage regulation and robust canopy design for continuous operations.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/cummins/cummins-600-900-150x150.webp',
+    heroImage: '/Cummins 650kVA Industrial.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/cummins/cummins-600-900-150x150.webp',
+      '/Cummins 650kVA Industrial.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-setleri.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-2.png',
       '/pictures-from-gucbir/Gucbir_Products/generator-cabin/sessiz-kabin-teknolojisi-1-1024x354.png'
@@ -325,9 +325,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'Cummins 1500kVA Industrial',
     brand: 'Gucbir',
     description: 'High-capacity Cummins generator solution for mission-critical facilities requiring scalable power, parallel synchronization readiness, and long-duration resilience.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/cummins/cummins-1250-1500-150x150.webp',
+    heroImage: '/Cummins 1500kVA Industrial.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/cummins/cummins-1250-1500-150x150.webp',
+      '/Cummins 1500kVA Industrial.png',
       '/pictures-from-gucbir/Gucbir_Products/synchronization-systems-in-generators-modern-solutions-with-the-gucbir-generator-difference/gucbir-jenerator-setleri-1024x325.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-setleri.png',
       '/pictures-from-gucbir/Gucbir_Products/company-profile/gucbir-jenerator-uretim-alani.jpg'
@@ -364,9 +364,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'Yuchai 200kVA Industrial',
     brand: 'Gucbir',
     description: 'A balanced industrial diesel generator built for dependable standby power and efficient fuel consumption, ideal for factories, workshops, and mid-scale commercial buildings.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/dizel-jenerator/yuchai-200-400-150x150.webp',
+    heroImage: '/Yuchai 200kVA Industrial.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/dizel-jenerator/yuchai-200-400-150x150.webp',
+      '/Yuchai 200kVA Industrial.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-2.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-setleri.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/kabinsiz-dizel-jenenerator-2.png'
@@ -403,9 +403,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'Yuchai 900kVA Industrial',
     brand: 'Gucbir',
     description: 'High output generator set designed for demanding industrial environments where continuous-duty capability and reliable electrical performance are mandatory.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/dizel-jenerator/yuchai-900-1250-150x150.webp',
+    heroImage: '/Yuchai 900kVA Industrial.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/dizel-jenerator/yuchai-900-1250-150x150.webp',
+      '/Yuchai 900kVA Industrial.png',
       '/pictures-from-gucbir/Gucbir_Products/company-profile/gucbir-jenerator-uretim-alani.jpg',
       '/pictures-from-gucbir/Gucbir_Products/synchronization-systems-in-generators-modern-solutions-with-the-gucbir-generator-difference/gucbir-jenerator-setleri-1024x325.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-setleri.png'
@@ -442,9 +442,9 @@ export const PRODUCTS: Record<string, ProductData> = {
     title: 'Doosan 700kVA Industrial',
     brand: 'Gucbir',
     description: 'Industrial generator solution built around the Doosan engine platform, optimized for reliability, easy maintenance access, and stable power output under heavy loads.',
-    heroImage: '/pictures-from-gucbir/Gucbir_Products/volvo/Doosan-Diesel-Generator-400-700-150x150.webp',
+    heroImage: '/Doosan 700kVA Industrial.png',
     gallery: [
-      '/pictures-from-gucbir/Gucbir_Products/volvo/Doosan-Diesel-Generator-400-700-150x150.webp',
+      '/Doosan 700kVA Industrial.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-2.png',
       '/pictures-from-gucbir/Gucbir_Products/homepage_general/gucbir-jenerator-setleri.png',
       '/pictures-from-gucbir/Gucbir_Products/gucbir-quality-in-perkins-engine-generators/gucbir-jenerator-1024x1024.jpeg'

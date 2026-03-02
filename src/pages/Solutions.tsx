@@ -32,7 +32,7 @@ export function Solutions() {
       description: 'Heavy-duty power solutions featuring Gucbar generator systems. Reliable performance for commercial and industrial applications.',
       category: 'Generators',
       icon: <img src="/gucbar-logo.png" alt="GUCBAR Logo" className="h-12 w-auto object-contain" />,
-      image: '/pictures-from-gucbir/Gucbir_Products/GJB7500Ei.png',
+      image: '/Perkins 110kVA Industrial.png',
       specs: ['High Efficiency', 'Continuous Duty', 'Weatherproof Enclosures']
     },
     {

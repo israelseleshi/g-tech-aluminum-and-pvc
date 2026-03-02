@@ -362,7 +362,7 @@ export function Home() {
             {[
               { title: 'Aluminum Works', image: '/pictures-from-lorenzoline/Lorenzo_Products/alumunium-windows-and-doors.png', desc: 'Precision-engineered frames for windows, doors, and specialized architectural needs.' },
               { title: 'Elevator Systems', image: '/pictures-from-kernekasansor/Kernek_Products/elevator-3d-model.png', desc: 'Advanced elevator systems designed for safe, smooth, and efficient vertical transportation.' },
-              { title: 'Power Generator', image: '/pictures-from-gucbir/Gucbir_Products/GJB7500Ei.png', desc: 'Heavy-duty power solutions featuring Gucbar generator systems.' }
+              { title: 'Power Generator', image: '/Yuchai 200kVA Industrial.png', desc: 'Heavy-duty power solutions featuring Gucbar generator systems.' }
             ].map((item, i) => (
               <motion.div
                 key={i}

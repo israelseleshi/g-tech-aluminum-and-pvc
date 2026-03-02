@@ -59,12 +59,12 @@ export function ProductDetail() {
               </h1>
               <div className="flex items-center gap-4">
                 <span className="px-6 py-2 bg-accent text-white font-black uppercase tracking-widest text-xs">Series Specification 2024</span>
-                <img src="/lorenzoline-logo.png" alt="Lorenzoline Logo" className="h-8 w-auto" />
+                <img src="/lorenzoline-logo.png" alt="Lorenzoline Logo" className="h-20 md:h-24 w-auto" />
               </div>
             </div>
             <div className="max-w-md space-y-8">
               <p className="text-2xl text-primary font-medium leading-tight tracking-tighter">{p.description}</p>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-6 md:gap-8">
                 {p.features.map(f => (
                   <div key={f} className="flex items-center gap-4 border-b border-border pb-4 group">
                     <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
@@ -103,12 +103,12 @@ export function ProductDetail() {
               </h1>
               <div className="flex items-center gap-4">
                 <span className="px-6 py-2 bg-accent text-white font-black uppercase tracking-widest text-xs">Industrial Power 2024</span>
-                <img src="/gucbar-logo.png" alt="Gucbar Logo" className="h-8 w-auto" />
+                <img src="/gucbar-logo.png" alt="Gucbar Logo" className="h-10 w-auto" />
               </div>
             </div>
             <div className="max-w-md space-y-8">
               <p className="text-2xl text-primary font-medium leading-tight tracking-tighter">{p.description}</p>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-6 md:gap-8">
                 {p.features.map(f => (
                   <div key={f} className="flex items-center gap-4 border-b border-border pb-4 group">
                     <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
@@ -119,8 +119,8 @@ export function ProductDetail() {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
-            <div className="lg:col-span-2 aspect-video bg-surface">
-              <img src={p.heroImage} className="w-full h-full object-contain p-12" />
+            <div className="lg:col-span-2 aspect-video bg-surface flex items-center justify-center p-8">
+              <img src={p.heroImage} className="max-w-full max-h-full object-contain" />
             </div>
             <div className="grid grid-cols-1 gap-1">
               {Object.entries(p.specs).slice(0, 3).map(([key, value]) => (

@@ -388,7 +388,7 @@ export function Layout() {
                 <div className="pt-8 border-t border-border flex flex-col items-center gap-6">
                    <p className="text-[10px] font-black uppercase tracking-widest text-primary"> © 2026 G-TECH ALUMINUM & PVC PRODUCTION PLC</p>
                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary">
-                     <span className="opacity-100">Developed by</span>
+                     <span className="opacity-100">Powered by</span>
                      <a href="https://nanocomputingict.com/" target="_blank" rel="noopener noreferrer">
                        <img src="/nano-computing-ict-solutions-logo.png" alt="Nano Computing" className="h-5 w-auto" />
                      </a>
@@ -429,7 +429,7 @@ export function Layout() {
                 <div className="pt-8 border-t border-border flex flex-col items-center gap-6">
                    <p className="text-[10px] font-black uppercase tracking-widest text-primary"> © 2026 G-TECH ALUMINUM & PVC PRODUCTION PLC</p>
                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary">
-                     <span className="opacity-100">Developed by</span>
+                     <span className="opacity-100">Powered by</span>
                      <a href="https://nanocomputingict.com/" target="_blank" rel="noopener noreferrer">
                        <img src="/nano-computing-ict-solutions-logo.png" alt="Nano Computing" className="h-5 w-auto" />
                      </a>

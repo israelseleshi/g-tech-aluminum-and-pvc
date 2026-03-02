@@ -462,26 +462,26 @@ export function Layout() {
       {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
-          scrolled ? 'bg-white/80 backdrop-blur-md border-b border-border py-4 shadow-sm' : 'bg-transparent py-6'
+          scrolled ? 'bg-white/80 backdrop-blur-md border-b border-border py-2 md:py-4 shadow-sm' : 'bg-transparent py-4 md:py-6'
         }`}
       >
         <div className="max-w-screen-2xl mx-auto px-4 md:px-6">
-          <div className={`md:block hidden transition-colors duration-500 ${!scrolled && location.pathname === '/' ? 'text-white' : 'text-primary'}`}>
+          <div className={`md:block hidden transition-colors duration-500 ${!scrolled && (location.pathname === '/' || (location.pathname.startsWith('/projects/') && location.pathname.length > 10)) ? 'text-white' : 'text-primary'}`}>
             {renderDesktopNav()}
           </div>
           <div className="md:hidden flex justify-between items-center">
             <Link to="/" className="flex items-center gap-2 text-left">
-              <img src={logoUrl} alt="G-TECH" className="h-10 w-auto transition-all duration-500" />
+              <img src={logoUrl} alt="G-TECH" className="h-8 sm:h-10 w-auto transition-all duration-500" />
               <div className="flex flex-col">
-                <span className={`text-xs font-black tracking-tight transition-all duration-500 ${!scrolled && (location.pathname === '/' || location.pathname.startsWith('/projects/')) ? 'text-white' : 'text-white md:text-primary'}`}>G-TECH ALUMINUM & PVC PRODUCTION PLC</span>
-                <span className={`text-[10px] font-bold tracking-tight transition-all duration-500 ${!scrolled && (location.pathname === '/' || location.pathname.startsWith('/projects/')) ? 'text-white/80' : 'text-accent md:text-accent'}`}>Leading Ethiopian Industry Experience</span>
+                <span className={`text-[10px] sm:text-xs font-black tracking-tight transition-all duration-500 ${!scrolled && (location.pathname === '/' || (location.pathname.startsWith('/projects/') && location.pathname.length > 10)) ? 'text-white' : 'text-primary'}`}>G-TECH ALUMINUM & PVC PRODUCTION PLC</span>
+                <span className={`text-[8px] sm:text-[10px] font-bold tracking-tight transition-all duration-500 ${!scrolled && (location.pathname === '/' || (location.pathname.startsWith('/projects/') && location.pathname.length > 10)) ? 'text-white/80' : 'text-accent'}`}>Leading Ethiopian Industry Experience</span>
               </div>
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 transition-colors duration-500 ${!scrolled && (location.pathname === '/' || location.pathname.startsWith('/projects/')) ? 'text-white' : 'text-white md:text-primary'} hover:text-accent`}
+              className={`p-2 transition-colors duration-500 ${!scrolled && (location.pathname === '/' || (location.pathname.startsWith('/projects/') && location.pathname.length > 10)) ? 'text-white' : 'text-primary'} hover:text-accent`}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>

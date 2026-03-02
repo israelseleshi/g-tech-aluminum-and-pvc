@@ -63,8 +63,8 @@ export function Solutions() {
               <div className="flex items-center gap-4 mb-6 md:mb-8">
                 {item.icon}
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-3 md:mb-4 tracking-tighter">{item.title}</h2>
-              <p className="text-base md:text-lg text-muted mb-4 md:mb-6 leading-tight font-medium tracking-tight">{item.description}</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-3 md:mb-4 tracking-tighter uppercase">{item.title}</h2>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted mb-4 md:mb-6 leading-tight font-medium tracking-tight">{item.description}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-6 md:mb-8">
                 {item.specs.map((spec, i) => (
                   <div key={i} className="flex items-center gap-2">
@@ -101,10 +101,10 @@ export function Solutions() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12 md:mb-16 max-w-4xl pt-12 md:pt-24"
+          className="mb-8 sm:mb-12 md:mb-16 max-w-4xl pt-12 md:pt-24"
         >
-          <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-primary uppercase leading-[0.8] mb-4">Products</h1>
-          <p className="text-lg md:text-xl text-muted font-medium leading-tight">Explore our world-class architectural systems and industrial power solutions.</p>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-primary uppercase leading-[0.8] mb-4">Products</h1>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted font-medium leading-tight">Explore our world-class architectural systems and industrial power solutions.</p>
         </motion.div>
 
         <motion.div
@@ -130,9 +130,9 @@ export function Solutions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold tracking-tighter mb-16 md:mb-24 text-primary"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-12 md:mb-24 text-primary uppercase"
           >
-            THE PROCESS
+            The Process
           </motion.h2>
           <div className="space-y-0">
             {processSteps.map((step, index) => (
@@ -151,12 +151,12 @@ export function Solutions() {
                   )}
                 </div>
                 
-                <div className="max-w-3xl pb-16 md:pb-32">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-6">
-                    <span className="text-5xl sm:text-6xl md:text-8xl font-bold text-border group-hover:text-primary/20 transition-colors">0{index + 1}</span>
-                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-primary">{step.title}</h3>
+                <div className="max-w-3xl pb-12 md:pb-32">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-4 sm:mb-6">
+                    <span className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-border group-hover:text-primary/20 transition-colors">0{index + 1}</span>
+                    <h3 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-primary uppercase">{step.title}</h3>
                   </div>
-                  <p className="text-lg md:text-xl text-muted font-medium leading-relaxed">{step.desc}</p>
+                  <p className="text-base sm:text-lg md:text-xl text-muted font-medium leading-relaxed">{step.desc}</p>
                 </div>
               </motion.div>
             ))}

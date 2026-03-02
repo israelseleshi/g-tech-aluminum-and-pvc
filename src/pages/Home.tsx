@@ -182,8 +182,8 @@ export function Home() {
       <section className="section-padding bg-white border-t border-border overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface/20 to-transparent pointer-events-none" />
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-6xl font-black text-primary uppercase tracking-tighter text-center">Testimonials</h2>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black text-primary uppercase tracking-tighter text-center">Testimonials</h2>
           </div>
           
           <div className="relative overflow-hidden">
@@ -253,7 +253,7 @@ export function Home() {
               initial={{ y: 50, opacity: 0 }} 
               animate={{ y: 0, opacity: 1 }} 
               transition={{ delay: 0.3 }} 
-              className="text-7xl md:text-[10rem] font-bold text-white leading-none tracking-tighter mb-12 uppercase"
+              className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold text-white leading-[0.85] tracking-tighter mb-8 md:mb-12 uppercase"
             >
               {heroData.title}
             </motion.h1>
@@ -295,7 +295,7 @@ export function Home() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-transparent pointer-events-none" />
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
             {[
               { label: 'Projects Completed', value: '1,500+' },
               { label: 'Years Experience', value: '15+' },
@@ -308,18 +308,18 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-surface py-12 md:py-24 px-4 md:px-8 flex flex-col items-center justify-center text-center"
+                className="bg-surface py-8 sm:py-12 md:py-24 px-4 md:px-8 flex flex-col items-center justify-center text-center"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 + 0.2 }}
-                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary mb-4 tracking-tighter"
+                  className="text-2xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-primary mb-2 sm:mb-4 tracking-tighter"
                 >
                   {stat.value}
                 </motion.div>
-                <div className="micro-label">{stat.label}</div>
+                <div className="micro-label text-[8px] sm:text-[10px] md:text-xs">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -344,10 +344,10 @@ export function Home() {
             className="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8"
           >
             <div className="max-w-3xl">
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-primary">OUR CORE DIVISIONS</h2>
-              <p className="text-muted text-xl font-medium leading-relaxed">Delivering high-performance materials for the Ethiopian finishing sector with uncompromising quality.</p>
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold tracking-tighter mb-4 sm:mb-6 text-primary uppercase">Our Core Divisions</h2>
+              <p className="text-muted text-base sm:text-lg lg:text-xl font-medium leading-tight sm:leading-relaxed">Delivering high-performance materials for the Ethiopian finishing sector with uncompromising quality.</p>
             </div>
-            <Link to="/solutions" className="btn-outline shrink-0">
+            <Link to="/solutions" className="btn-outline shrink-0 w-full sm:w-fit text-center">
               Explore Products
             </Link>
           </motion.div>
@@ -411,26 +411,26 @@ export function Home() {
               transition={{ duration: 0.6 }}
               className="order-2 lg:order-1"
             >
-              <div className="micro-label mb-6">Featured Project</div>
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-primary">BOLE TOWER COMPLEX</h2>
-              <div className="space-y-6 mb-12 text-sm font-medium">
-                <div className="flex border-b border-border pb-4">
-                  <span className="w-32 text-muted uppercase tracking-widest text-xs font-bold">Location</span>
+              <div className="micro-label mb-4 sm:mb-6">Featured Project</div>
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold tracking-tighter mb-6 sm:mb-8 text-primary uppercase">Bole Tower Complex</h2>
+              <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12 text-xs sm:text-sm font-medium">
+                <div className="flex border-b border-border pb-3 sm:pb-4">
+                  <span className="w-24 sm:w-32 text-muted uppercase tracking-widest text-[10px] sm:text-xs font-bold">Location</span>
                   <span className="text-primary font-bold">Bole, Addis Ababa</span>
                 </div>
-                <div className="flex border-b border-border pb-4">
-                  <span className="w-32 text-muted uppercase tracking-widest text-xs font-bold">Scope</span>
+                <div className="flex border-b border-border pb-3 sm:pb-4">
+                  <span className="w-24 sm:w-32 text-muted uppercase tracking-widest text-[10px] sm:text-xs font-bold">Scope</span>
                   <span className="text-primary font-bold">Full Curtain Wall & PVC Windows</span>
                 </div>
-                <div className="flex border-b border-border pb-4">
-                  <span className="w-32 text-muted uppercase tracking-widest text-xs font-bold">Scale</span>
+                <div className="flex border-b border-border pb-3 sm:pb-4">
+                  <span className="w-24 sm:w-32 text-muted uppercase tracking-widest text-[10px] sm:text-xs font-bold">Scale</span>
                   <span className="text-primary font-bold">12 Stories, 45,000 sq ft</span>
                 </div>
               </div>
-              <p className="text-muted leading-relaxed mb-12 font-medium text-lg">
+              <p className="text-muted leading-tight sm:leading-relaxed mb-8 sm:mb-12 font-medium text-base sm:text-lg">
                 A landmark project showcasing our end-to-end capabilities. From custom aluminum extrusion to on-site installation, G-Tech delivered a high-performance facade that defines the modern Addis skyline.
               </p>
-              <Link to="/projects/1" className="btn-solid group">
+              <Link to="/projects/1" className="btn-solid group w-full sm:w-fit text-center">
                 View Case Study <ArrowRight size={16} className="ml-3 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>

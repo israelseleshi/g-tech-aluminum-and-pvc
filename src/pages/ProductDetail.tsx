@@ -50,40 +50,40 @@ export function ProductDetail() {
 
   const renderAluminumDesign = (p: ProductData) => {
     return (
-      <div className="pt-12 bg-white pb-16">
-        <section className="max-w-screen-2xl mx-auto px-6 md:px-12">
+      <div className="pt-6 md:pt-12 bg-white pb-12 md:pb-16">
+        <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 xl:px-24">
           {/* 1. Brand Logo & Title Area - Minimalist */}
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12 border-b border-border pb-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <span className="px-4 py-1 bg-accent text-white font-black uppercase tracking-widest text-[10px]">Aluminum Series</span>
-                <img src="/lorenzoline-logo.png" alt="Lorenzoline Logo" className="h-12 w-auto" />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8 mb-8 md:mb-12 border-b border-border pb-6 md:pb-8">
+            <div className="space-y-3 md:space-y-4 w-full">
+              <div className="flex items-center gap-3 md:gap-4">
+                <span className="px-3 py-1 bg-accent text-white font-black uppercase tracking-widest text-[9px] md:text-[10px]">Aluminum Series</span>
+                <img src="/lorenzoline-logo.png" alt="Lorenzoline Logo" className="h-10 md:h-12 w-auto" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-primary tracking-tighter uppercase leading-none break-words">
                 {p.title}
               </h1>
             </div>
           </div>
 
           {/* 2. Hero Image & Specs Grid - Impactful First Impression */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 mb-24">
-            <div className="lg:col-span-2 aspect-video bg-surface overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 mb-16 md:mb-24">
+            <div className="lg:col-span-2 aspect-square sm:aspect-video bg-surface overflow-hidden">
               <img src={p.heroImage} className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" alt={p.title} />
             </div>
-            <div className="grid grid-cols-1 gap-1">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-1">
               {Object.entries(p.specs).slice(0, 3).map(([key, value]) => (
-                <div key={key} className="p-10 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
-                  <span className="text-3xl font-black uppercase tracking-tighter">{value}</span>
+                <div key={key} className="p-6 sm:p-8 md:p-10 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500 min-h-[140px] sm:min-h-0 lg:min-h-[160px]">
+                  <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
+                  <span className="text-2xl sm:text-xl md:text-3xl xl:text-4xl font-black uppercase tracking-tighter break-words">{value}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* 3. Secondary Gallery Images - Balanced in the middle */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-16 md:mb-32">
             {p.gallery.slice(1, 3).map((img, i) => (
-              <div key={i} className="aspect-[16/10] bg-surface overflow-hidden relative group">
+              <div key={i} className="aspect-[4/3] sm:aspect-[16/10] bg-surface overflow-hidden relative group">
                 <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Maximize2 className="text-white" />
@@ -93,16 +93,16 @@ export function ProductDetail() {
           </div>
 
           {/* 4. Engineering Integrity & Description - Final Technical Deep Dive */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start border-t border-border pt-24">
-            <div className="space-y-8">
-              <h2 className="text-5xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br/>Integrity</h2>
-              <p className="text-2xl text-primary font-medium leading-tight tracking-tighter max-w-md">{p.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-24 items-start border-t border-border pt-12 md:pt-24">
+            <div className="space-y-6 md:space-y-8">
+              <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br className="hidden sm:block"/>Integrity</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-primary font-medium leading-tight tracking-tighter max-w-md">{p.description}</p>
             </div>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
               {p.features.map(f => (
-                <div key={f} className="flex items-center gap-4 border-b border-border pb-6 group">
-                  <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
-                  <span className="text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
+                <div key={f} className="flex items-center gap-3 md:gap-4 border-b border-border pb-4 md:pb-6 group">
+                  <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform shrink-0" />
+                  <span className="text-xs md:text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
                 </div>
               ))}
             </div>
@@ -114,40 +114,40 @@ export function ProductDetail() {
 
   const renderGeneratorDetail = (p: ProductData) => {
     return (
-      <div className="pt-12 bg-white pb-16">
-        <section className="max-w-screen-2xl mx-auto px-6 md:px-12">
+      <div className="pt-6 md:pt-12 bg-white pb-12 md:pb-16">
+        <section className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 xl:px-24">
           {/* 1. Brand Logo & Title Area */}
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12 border-b border-border pb-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <span className="px-4 py-1 bg-accent text-white font-black uppercase tracking-widest text-[10px]">Industrial Power</span>
-                <img src="/gucbar-logo.png" alt="Gucbar Logo" className="h-8 w-auto" />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8 mb-8 md:mb-12 border-b border-border pb-6 md:pb-8">
+            <div className="space-y-3 md:space-y-4 w-full">
+              <div className="flex items-center gap-3 md:gap-4">
+                <span className="px-3 py-1 bg-accent text-white font-black uppercase tracking-widest text-[9px] md:text-[10px]">Industrial Power</span>
+                <img src="/gucbar-logo.png" alt="Gucbar Logo" className="h-8 md:h-10 w-auto" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-primary tracking-tighter uppercase leading-none break-words">
                 {p.title}
               </h1>
             </div>
           </div>
 
           {/* 2. Hero Image & Specs Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 mb-24">
-            <div className="lg:col-span-2 aspect-video bg-surface flex items-center justify-center p-8 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 mb-16 md:mb-24">
+            <div className="lg:col-span-2 aspect-square sm:aspect-video bg-surface flex items-center justify-center p-6 md:p-12 overflow-hidden border border-border/50">
               <img src={p.heroImage} className="max-w-full max-h-full object-contain transition-transform duration-1000 hover:scale-105" alt={p.title} />
             </div>
-            <div className="grid grid-cols-1 gap-1">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-1">
               {Object.entries(p.specs).slice(0, 3).map(([key, value]) => (
-                <div key={key} className="p-10 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
-                  <span className="text-3xl font-black uppercase tracking-tighter">{value}</span>
+                <div key={key} className="p-6 sm:p-8 md:p-10 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500 min-h-[140px] sm:min-h-0 lg:min-h-[160px]">
+                  <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
+                  <span className="text-2xl sm:text-xl md:text-3xl xl:text-4xl font-black uppercase tracking-tighter break-words">{value}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* 3. Secondary Gallery Images */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-16 md:mb-32">
             {p.gallery.slice(1, 3).map((img, i) => (
-              <div key={i} className="aspect-[16/10] bg-surface flex items-center justify-center p-12 overflow-hidden relative group border border-border/50">
+              <div key={i} className="aspect-[4/3] sm:aspect-[16/10] bg-surface flex items-center justify-center p-6 md:p-12 overflow-hidden relative group border border-border/50">
                 <img src={img} className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Maximize2 className="text-white" />
@@ -157,16 +157,16 @@ export function ProductDetail() {
           </div>
 
           {/* 4. Engineering Integrity & Description */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start border-t border-border pt-24">
-            <div className="space-y-8">
-              <h2 className="text-5xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br/>Integrity</h2>
-              <p className="text-2xl text-primary font-medium leading-tight tracking-tighter max-w-md">{p.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-24 items-start border-t border-border pt-12 md:pt-24">
+            <div className="space-y-6 md:space-y-8">
+              <h2 className="text-4xl md:text-5xl xl:text-6xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br className="hidden sm:block"/>Integrity</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-primary font-medium leading-tight tracking-tighter max-w-md">{p.description}</p>
             </div>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
               {p.features.map(f => (
-                <div key={f} className="flex items-center gap-4 border-b border-border pb-6 group">
-                  <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
-                  <span className="text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
+                <div key={f} className="flex items-center gap-3 md:gap-4 border-b border-border pb-4 md:pb-6 group">
+                  <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform shrink-0" />
+                  <span className="text-xs md:text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
                 </div>
               ))}
             </div>
@@ -179,39 +179,39 @@ export function ProductDetail() {
   const renderElevatorDetail = (p: ProductData) => (
     <div className="bg-white min-h-screen">
       {/* Luxury Vertical Mobility Hero */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden bg-[#0a0a0a]">
+      <section className="relative h-[80vh] md:h-[90vh] flex items-center overflow-hidden bg-[#0a0a0a]">
         <div className="absolute inset-0 z-0 flex justify-end">
-          <div className="w-1/2 h-full relative">
+          <div className="w-full lg:w-1/2 h-full relative">
             <Suspense fallback={<div className="w-full h-full bg-primary/10 animate-pulse" />}>
               <img 
                 src={p.variants && p.variants[0].options[activeVariant].image ? p.variants[0].options[activeVariant].image : p.heroImage} 
-                className="w-full h-full object-contain p-12 md:p-24 transition-all duration-700" 
+                className="w-full h-full object-contain p-8 sm:p-12 md:p-24 transition-all duration-700" 
                 alt={p.title}
                 loading="lazy"
               />
             </Suspense>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/50 lg:via-transparent to-transparent pointer-events-none" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/20 pointer-events-none" />
         </div>
         
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10 w-full">
-          <motion.div {...FADE_UP} className="max-w-4xl space-y-8">
-            <div className="flex items-center gap-6">
-              <span className="px-5 py-2 bg-accent text-white font-black uppercase tracking-widest text-[10px]">Elevator Systems</span>
-              <img src="/kerner-asansor-logo.png" alt="Kernek Asansor" className="h-8 w-auto brightness-0 invert opacity-80" />
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 xl:px-24 relative z-10 w-full">
+          <motion.div {...FADE_UP} className="max-w-4xl space-y-4 sm:space-y-6 md:space-y-8">
+            <div className="flex items-center gap-3 sm:gap-6">
+              <span className="px-3 py-1 sm:px-5 sm:py-2 bg-accent text-white font-black uppercase tracking-widest text-[8px] sm:text-[10px]">Elevator Systems</span>
+              <img src="/kerner-asansor-logo.png" alt="Kernek Asansor" className="h-6 sm:h-8 w-auto brightness-0 invert opacity-80" />
             </div>
-            <h1 className="text-5xl md:text-[6rem] font-black text-white tracking-tighter uppercase leading-[0.8]">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[6rem] font-black text-white tracking-tighter uppercase leading-[0.8] break-words">
               {p.title}
             </h1>
-            <p className="text-xl text-white/50 font-medium max-w-2xl leading-relaxed">
+            <p className="text-sm sm:text-lg md:text-xl text-white/50 font-medium max-w-2xl leading-relaxed">
               {p.description}
             </p>
           </motion.div>
         </div>
 
         {/* Floating Quick Specs */}
-        <div className="absolute bottom-12 left-12 right-12 max-w-screen-2xl mx-auto flex flex-wrap gap-12 text-white">
+        <div className="absolute bottom-6 sm:bottom-12 left-4 sm:left-6 md:left-12 right-4 sm:right-6 md:right-12 max-w-screen-2xl mx-auto flex flex-wrap gap-4 sm:gap-8 md:gap-12 text-white">
           {Object.entries(p.specs).slice(0, 4).map(([key, value], i) => (
             <motion.div 
               key={key} 
@@ -221,39 +221,39 @@ export function ProductDetail() {
               transition={{ delay: 0.5 + i * 0.1 }}
               className="space-y-1"
             >
-              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
-              <p className="text-xl md:text-2xl font-black uppercase tracking-tight text-white">{value}</p>
+              <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
+              <p className="text-sm sm:text-lg md:text-2xl font-black uppercase tracking-tight text-white">{value}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Customization & Design */}
-      <section className="py-32 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-32">
-          <div className="space-y-16">
-            <div className="space-y-6">
-              <h2 className="text-5xl font-black text-primary tracking-tighter uppercase leading-none">Architectural<br/>Integration</h2>
-              <p className="text-xl text-muted font-medium max-w-md italic border-l-4 border-accent pl-8">Precision motion meets architectural harmony. Engineered for the modern Addis skyline.</p>
+      <section className="py-16 sm:py-24 md:py-32 bg-white">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
+          <div className="space-y-8 sm:space-y-12 md:space-y-16">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary tracking-tighter uppercase leading-none">Architectural<br className="hidden sm:block"/>Integration</h2>
+              <p className="text-base sm:text-lg md:text-xl text-muted font-medium max-w-md italic border-l-4 border-accent pl-4 sm:pl-8">Precision motion meets architectural harmony. Engineered for the modern Addis skyline.</p>
             </div>
             
             {p.variants && (
-              <div className="space-y-8 p-12 bg-surface border border-border shadow-none">
-                <div className="flex items-center justify-between border-b border-border pb-8">
-                  <h4 className="text-sm font-black uppercase tracking-widest text-primary">{p.variants[0].label}</h4>
-                  <div className="px-4 py-2 bg-primary text-white text-[10px] font-black uppercase tracking-widest">Selection</div>
+              <div className="space-y-6 sm:space-y-8 p-6 sm:p-8 md:p-12 bg-surface border border-border shadow-none">
+                <div className="flex items-center justify-between border-b border-border pb-4 sm:pb-8">
+                  <h4 className="text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-widest text-primary">{p.variants[0].label}</h4>
+                  <div className="px-2 py-1 sm:px-4 sm:py-2 bg-primary text-white text-[8px] sm:text-[10px] font-black uppercase tracking-widest">Selection</div>
                 </div>
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-3 sm:gap-6">
                   {p.variants[0].options.map((opt, i) => (
                     <button 
                       key={i} 
                       onClick={() => setActiveVariant(i)}
-                      className={`flex flex-col items-center gap-4 group transition-all ${activeVariant === i ? 'scale-105' : 'opacity-40 grayscale hover:opacity-100'}`}
+                      className={`flex flex-col items-center gap-2 sm:gap-4 group transition-all ${activeVariant === i ? 'scale-105' : 'opacity-40 grayscale hover:opacity-100'}`}
                     >
                       <div className="w-full aspect-square bg-white border border-border transition-transform group-hover:scale-105 overflow-hidden">
                         <img src={opt.image} className="w-full h-full object-cover" alt={opt.name} />
                       </div>
-                      <span className="text-[10px] font-black text-primary uppercase tracking-tight text-center">{opt.name}</span>
+                      <span className="text-[8px] sm:text-[10px] font-black text-primary uppercase tracking-tight text-center break-words">{opt.name}</span>
                     </button>
                   ))}
                 </div>
@@ -261,14 +261,14 @@ export function ProductDetail() {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-fit">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 h-fit">
             {p.features.map((f, i) => (
-              <div key={i} className="p-10 bg-surface border border-border shadow-none hover:bg-primary hover:text-white transition-all group">
-                <div className="w-12 h-12 bg-accent/10 rounded-none flex items-center justify-center mb-8 group-hover:bg-accent transition-colors duration-500">
-                  <Plus className="text-accent group-hover:text-white transition-colors" size={24} />
+              <div key={i} className="p-6 sm:p-8 md:p-10 bg-surface border border-border shadow-none hover:bg-primary hover:text-white transition-all group">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 bg-accent/10 rounded-none flex items-center justify-center mb-4 sm:mb-8 group-hover:bg-accent transition-colors duration-500">
+                  <Plus className="text-accent group-hover:text-white transition-colors" size={20} />
                 </div>
-                <h5 className="text-lg font-black uppercase tracking-tight mb-4">{f}</h5>
-                <p className="text-sm opacity-60 font-medium leading-relaxed">Integrated standard in high-performance {p.brand} systems.</p>
+                <h5 className="text-base sm:text-lg font-black uppercase tracking-tight mb-2 sm:mb-4">{f}</h5>
+                <p className="text-xs sm:text-sm opacity-60 font-medium leading-relaxed">Integrated standard in high-performance {p.brand} systems.</p>
               </div>
             ))}
           </div>
@@ -276,15 +276,15 @@ export function ProductDetail() {
       </section>
 
       {/* Components Gallery */}
-      <section className="py-32 border-t border-border">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="mb-16">
-            <h3 className="text-4xl font-black text-primary uppercase tracking-tighter">System Components</h3>
+      <section className="py-16 sm:py-24 md:py-32 border-t border-border">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 xl:px-24">
+          <div className="mb-8 sm:mb-16">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary uppercase tracking-tighter">System Components</h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
             {p.gallery.map((img, i) => (
               <div key={i} className="aspect-square bg-white overflow-hidden group relative">
-                <img src={img} className="w-full h-full object-contain p-8 transition-transform duration-700 group-hover:scale-110" alt="Component" />
+                <img src={img} className="w-full h-full object-contain p-4 sm:p-8 transition-transform duration-700 group-hover:scale-110" alt="Component" />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Maximize2 className="text-white" />
                 </div>
@@ -321,18 +321,18 @@ export function ProductDetail() {
       {/* Category Tabs (Aluminum only) - Professional Architectural Design */}
     {activeProduct?.category === 'aluminum' && (
         <div className="sticky top-[72px] md:top-[88px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12">
             <div className="flex justify-center">
-              <div className="flex gap-4 md:gap-12 overflow-x-auto no-scrollbar py-0">
+              <div className="flex gap-4 sm:gap-8 md:gap-12 overflow-x-auto no-scrollbar py-0">
                 {Object.values(PRODUCTS)
                   .filter(p => p.category === 'aluminum' && p.id !== 'pvc-profiles')
                   .map(p => (
                   <button
                     key={p.id}
                     onClick={() => setActiveTabId(p.id)}
-                    className={`relative py-6 px-4 flex items-center gap-3 transition-all duration-300 group`}
+                    className={`relative py-4 sm:py-6 px-2 sm:px-4 flex items-center gap-2 sm:gap-3 transition-all duration-300 group`}
                   >
-                    <span className={`text-sm md:text-base font-black uppercase tracking-tighter transition-colors duration-300 ${
+                    <span className={`text-[10px] sm:text-sm md:text-base font-black uppercase tracking-tighter transition-colors duration-300 ${
                       activeTabId === p.id ? 'text-primary' : 'text-muted group-hover:text-primary'
                     }`}>
                       {p.typology}
@@ -355,16 +355,16 @@ export function ProductDetail() {
       {/* Category Tabs (Generators) - Same UX as Aluminum */}
       {activeProduct?.category === 'generators' && (
         <div className="sticky top-[72px] md:top-[88px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-            <div className="flex justify-start">
-              <div className="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar py-0">
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12">
+            <div className="flex justify-start lg:justify-center">
+              <div className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto no-scrollbar py-0">
                 {Object.values(PRODUCTS).filter(p => p.category === 'generators').map(p => (
                   <button
                     key={p.id}
                     onClick={() => setActiveTabId(p.id)}
-                    className={`relative py-6 px-4 flex items-center gap-3 transition-all duration-300 group text-left`}
+                    className={`relative py-4 sm:py-6 px-2 sm:px-4 flex items-center gap-2 sm:gap-3 transition-all duration-300 group text-left`}
                   >
-                    <span className={`text-[11px] md:text-xs font-black uppercase tracking-tighter leading-tight transition-colors duration-300 max-w-[120px] ${
+                    <span className={`text-[9px] sm:text-[11px] md:text-xs font-black uppercase tracking-tighter leading-tight transition-colors duration-300 max-w-[80px] sm:max-w-[120px] ${
                       activeTabId === p.id ? 'text-primary' : 'text-muted group-hover:text-primary'
                     }`}>
                       {p.title}
@@ -387,16 +387,16 @@ export function ProductDetail() {
       {/* Category Tabs (Elevators) - High-end performance design */}
       {activeProduct?.category === 'elevators' && (
         <div className="sticky top-[72px] md:top-[88px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12">
             <div className="flex justify-center">
-              <div className="flex gap-4 md:gap-12 overflow-x-auto no-scrollbar py-0">
+              <div className="flex gap-4 sm:gap-8 md:gap-12 overflow-x-auto no-scrollbar py-0">
                 {Object.values(PRODUCTS).filter(p => p.category === 'elevators').map(p => (
                   <button
                     key={p.id}
                     onClick={() => setActiveTabId(p.id)}
-                    className={`relative py-6 px-4 flex items-center gap-3 transition-all duration-300 group`}
+                    className={`relative py-4 sm:py-6 px-2 sm:px-4 flex items-center gap-2 sm:gap-3 transition-all duration-300 group`}
                   >
-                    <span className={`text-sm md:text-base font-black uppercase tracking-tighter transition-colors duration-300 ${
+                    <span className={`text-[10px] sm:text-sm md:text-base font-black uppercase tracking-tighter transition-colors duration-300 ${
                       activeTabId === p.id ? 'text-primary' : 'text-muted group-hover:text-primary'
                     }`}>
                       {p.typology}

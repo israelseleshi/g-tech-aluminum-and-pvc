@@ -313,7 +313,7 @@ export function Layout() {
               <p className="text-base font-bold leading-relaxed tracking-tighter">High-performance Aluminum and PVC systems for modern building envelopes.</p>
             </div>
             <div className="p-12 bg-transparent flex flex-col">
-              <h4 className="text-[12px] font-black uppercase tracking-widest text-accent mb-8">Navigation</h4>
+              <h4 className="text-[12px] font-black uppercase tracking-[0.06em] text-accent mb-8">Navigation</h4>
               <div className="flex flex-col gap-4 text-base font-bold tracking-tighter">
                 <Link to="/" className="hover:text-accent transition-colors">Home</Link>
                 {NAV_LINKS.map(link => <Link key={link.path} to={link.path} className="hover:text-accent transition-colors">{link.label}</Link>)}
@@ -321,11 +321,11 @@ export function Layout() {
               </div>
             </div>
             <div className="p-12 bg-transparent flex flex-col">
-              <h4 className="text-[12px] font-black uppercase tracking-widest text-accent mb-8">Main Office</h4>
+              <h4 className="text-[12px] font-black uppercase tracking-[0.06em] text-accent mb-8">Main Office</h4>
               <p className="text-base font-bold leading-relaxed tracking-tighter">Bole Kebele 42/50<br/>Addis Ababa, Ethiopia</p>
             </div>
             <div className="p-12 bg-transparent flex flex-col">
-              <h4 className="text-[12px] font-black uppercase tracking-widest text-accent mb-8">Contact</h4>
+              <h4 className="text-[12px] font-black uppercase tracking-[0.06em] text-accent mb-8">Contact</h4>
               <p className="text-base font-bold tracking-tighter leading-relaxed">info@gtech-pvc.com<br/>+251 116 47 94 59</p>
             </div>
           </div>

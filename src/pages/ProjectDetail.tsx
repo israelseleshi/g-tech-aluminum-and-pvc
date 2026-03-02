@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useParams, Link } from 'react-router-dom';
 import { useRef } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronRight, MapPin } from 'lucide-react';
 
 const projectData = {
   1: {
@@ -120,8 +120,14 @@ export function ProjectDetail() {
                     <motion.div {...FADE_UP}>
                         <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase leading-[0.8] mb-8">{project.title}</h1>
                         <div className="flex flex-wrap justify-center gap-8 text-white/80 font-bold uppercase tracking-widest text-[10px]">
-                            <div className="flex items-center gap-2">{project.location}</div>
-                            <div className="flex items-center gap-2">{project.date}</div>
+                            <div className="flex items-center gap-2">
+                                <MapPin size={14} className="text-white/70" />
+                                {project.location}
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Calendar size={14} className="text-white/70" />
+                                {project.date}
+                            </div>
                         </div>
                     </motion.div>
                 </div>
@@ -140,7 +146,8 @@ export function ProjectDetail() {
                                 <ul className="space-y-2">
                                     {project.specs.map((spec, i) => (
                                         <li key={i} className="flex items-center gap-3 font-bold text-primary uppercase text-[11px] tracking-tighter">
-                                            <span className="text-accent">{"->"}</span> {spec}
+                                            <ArrowRight size={14} className="text-accent" />
+                                            {spec}
                                         </li>
                                     ))}
                                 </ul>

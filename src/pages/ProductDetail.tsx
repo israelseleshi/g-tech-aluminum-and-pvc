@@ -50,39 +50,59 @@ export function ProductDetail() {
 
   const renderAluminumDesign = (p: ProductData) => {
     return (
-      <div className="pt-12 bg-white pb-32">
+      <div className="pt-12 bg-white pb-16">
         <section className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="border-t-4 border-primary pt-12 mb-24 flex flex-col md:flex-row justify-between items-start gap-12">
-            <div>
-              <h1 className="text-5xl md:text-7xl font-black text-primary tracking-tighter uppercase leading-[0.7] mb-8">
+          {/* 1. Brand Logo & Title Area - Minimalist */}
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12 border-b border-border pb-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-1 bg-accent text-white font-black uppercase tracking-widest text-[10px]">Aluminum Series</span>
+                <img src="/lorenzoline-logo.png" alt="Lorenzoline Logo" className="h-12 w-auto" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">
                 {p.title}
               </h1>
-              <div className="flex items-center gap-4">
-                <span className="px-6 py-2 bg-accent text-white font-black uppercase tracking-widest text-xs">Series Specification 2024</span>
-                <img src="/lorenzoline-logo.png" alt="Lorenzoline Logo" className="h-20 md:h-24 w-auto" />
-              </div>
-            </div>
-            <div className="max-w-md space-y-8">
-              <p className="text-2xl text-primary font-medium leading-tight tracking-tighter">{p.description}</p>
-              <div className="grid grid-cols-1 gap-6 md:gap-8">
-                {p.features.map(f => (
-                  <div key={f} className="flex items-center gap-4 border-b border-border pb-4 group">
-                    <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
-                    <span className="text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
-            <div className="lg:col-span-2 aspect-video bg-surface">
-              <img src={p.heroImage} className="w-full h-full object-cover" />
+
+          {/* 2. Hero Image & Specs Grid - Impactful First Impression */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 mb-24">
+            <div className="lg:col-span-2 aspect-video bg-surface overflow-hidden">
+              <img src={p.heroImage} className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" alt={p.title} />
             </div>
             <div className="grid grid-cols-1 gap-1">
               {Object.entries(p.specs).slice(0, 3).map(([key, value]) => (
-                <div key={key} className="p-12 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500">
-                  <span className="text-xs md:text-sm font-black uppercase tracking-tighter text-white group-hover:text-white">{key}</span>
-                  <span className="text-4xl font-black uppercase tracking-tighter">{value}</span>
+                <div key={key} className="p-10 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
+                  <span className="text-3xl font-black uppercase tracking-tighter">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 3. Secondary Gallery Images - Balanced in the middle */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+            {p.gallery.slice(1, 3).map((img, i) => (
+              <div key={i} className="aspect-[16/10] bg-surface overflow-hidden relative group">
+                <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <Maximize2 className="text-white" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 4. Engineering Integrity & Description - Final Technical Deep Dive */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start border-t border-border pt-24">
+            <div className="space-y-8">
+              <h2 className="text-5xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br/>Integrity</h2>
+              <p className="text-2xl text-primary font-medium leading-tight tracking-tighter max-w-md">{p.description}</p>
+            </div>
+            <div className="grid grid-cols-1 gap-8">
+              {p.features.map(f => (
+                <div key={f} className="flex items-center gap-4 border-b border-border pb-6 group">
+                  <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
+                  <span className="text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
                 </div>
               ))}
             </div>
@@ -94,39 +114,59 @@ export function ProductDetail() {
 
   const renderGeneratorDetail = (p: ProductData) => {
     return (
-      <div className="pt-12 bg-white pb-32">
+      <div className="pt-12 bg-white pb-16">
         <section className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="border-t-4 border-primary pt-12 mb-24 flex flex-col md:flex-row justify-between items-start gap-12">
-            <div>
-              <h1 className="text-5xl md:text-7xl font-black text-primary tracking-tighter uppercase leading-[0.85] mb-8 lg:max-w-3xl">
+          {/* 1. Brand Logo & Title Area */}
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12 border-b border-border pb-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-1 bg-accent text-white font-black uppercase tracking-widest text-[10px]">Industrial Power</span>
+                <img src="/gucbar-logo.png" alt="Gucbar Logo" className="h-8 w-auto" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">
                 {p.title}
               </h1>
-              <div className="flex items-center gap-4">
-                <span className="px-6 py-2 bg-accent text-white font-black uppercase tracking-widest text-xs">Industrial Power 2024</span>
-                <img src="/gucbar-logo.png" alt="Gucbar Logo" className="h-10 w-auto" />
-              </div>
-            </div>
-            <div className="max-w-md space-y-8">
-              <p className="text-2xl text-primary font-medium leading-tight tracking-tighter">{p.description}</p>
-              <div className="grid grid-cols-1 gap-6 md:gap-8">
-                {p.features.map(f => (
-                  <div key={f} className="flex items-center gap-4 border-b border-border pb-4 group">
-                    <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
-                    <span className="text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
-            <div className="lg:col-span-2 aspect-video bg-surface flex items-center justify-center p-8">
-              <img src={p.heroImage} className="max-w-full max-h-full object-contain" />
+
+          {/* 2. Hero Image & Specs Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 mb-24">
+            <div className="lg:col-span-2 aspect-video bg-surface flex items-center justify-center p-8 overflow-hidden">
+              <img src={p.heroImage} className="max-w-full max-h-full object-contain transition-transform duration-1000 hover:scale-105" alt={p.title} />
             </div>
             <div className="grid grid-cols-1 gap-1">
               {Object.entries(p.specs).slice(0, 3).map(([key, value]) => (
-                <div key={key} className="p-12 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500">
-                  <span className="text-xs md:text-sm font-black uppercase tracking-tighter text-white group-hover:text-white">{key}</span>
-                  <span className="text-4xl font-black uppercase tracking-tighter">{value}</span>
+                <div key={key} className="p-10 bg-primary text-white flex flex-col justify-between group hover:bg-accent transition-colors duration-500">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/60">{key}</span>
+                  <span className="text-3xl font-black uppercase tracking-tighter">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 3. Secondary Gallery Images */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+            {p.gallery.slice(1, 3).map((img, i) => (
+              <div key={i} className="aspect-[16/10] bg-surface flex items-center justify-center p-12 overflow-hidden relative group border border-border/50">
+                <img src={img} className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <Maximize2 className="text-white" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 4. Engineering Integrity & Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start border-t border-border pt-24">
+            <div className="space-y-8">
+              <h2 className="text-5xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br/>Integrity</h2>
+              <p className="text-2xl text-primary font-medium leading-tight tracking-tighter max-w-md">{p.description}</p>
+            </div>
+            <div className="grid grid-cols-1 gap-8">
+              {p.features.map(f => (
+                <div key={f} className="flex items-center gap-4 border-b border-border pb-6 group">
+                  <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
+                  <span className="text-sm font-black text-primary uppercase tracking-tighter">{f}</span>
                 </div>
               ))}
             </div>
@@ -280,7 +320,7 @@ export function ProductDetail() {
 
       {/* Category Tabs (Aluminum only) - Professional Architectural Design */}
     {activeProduct?.category === 'aluminum' && (
-        <div className="sticky top-20 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
+        <div className="sticky top-[72px] md:top-[88px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
             <div className="flex justify-center">
               <div className="flex gap-4 md:gap-12 overflow-x-auto no-scrollbar py-0">
@@ -314,7 +354,7 @@ export function ProductDetail() {
 
       {/* Category Tabs (Generators) - Same UX as Aluminum */}
       {activeProduct?.category === 'generators' && (
-        <div className="sticky top-20 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
+        <div className="sticky top-[72px] md:top-[88px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
             <div className="flex justify-start">
               <div className="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar py-0">
@@ -346,7 +386,7 @@ export function ProductDetail() {
 
       {/* Category Tabs (Elevators) - High-end performance design */}
       {activeProduct?.category === 'elevators' && (
-        <div className="sticky top-20 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
+        <div className="sticky top-[72px] md:top-[88px] left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-y border-border">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
             <div className="flex justify-center">
               <div className="flex gap-4 md:gap-12 overflow-x-auto no-scrollbar py-0">
@@ -394,72 +434,41 @@ export function ProductDetail() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Universal Detail Shared Components (Comparison, Gallery) - for ALL products */}
-      <div className="space-y-16 pb-16">
-        {/* Engineering Advantages Shared Section (Only for Aluminum and Generators) */}
-        {(activeProduct?.category === 'aluminum' || activeProduct?.category === 'generators') && (
-          <section className="max-w-screen-2xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
-              <div className="space-y-12">
-                <h2 className="text-5xl font-black text-primary tracking-tighter uppercase leading-none">Engineering<br/>Integrity</h2>
-                <div className="space-y-0">
-                  {activeProduct.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-4 py-6 border-b border-border group">
-                      <ArrowRight size={16} className="text-accent group-hover:translate-x-2 transition-transform" />
-                      <span className="text-sm font-black text-primary uppercase tracking-tighter">{feature}</span>
-                    </div>
-                  ))}
+      {/* Universal Detail Shared Components (Comparison) - for relevant products */}
+      <div className="pb-16">
+        <section className="max-w-screen-2xl mx-auto px-6 md:px-12">
+          {activeProduct.category === 'aluminum' && activeProduct.comparison && (
+            <div className="bg-primary rounded-none overflow-hidden shadow-2xl">
+              <div className="p-12 border-b border-white/10 flex justify-between items-center">
+                <h3 className="text-3xl font-black text-white uppercase tracking-tighter">System Comparison</h3>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                  <Plus className="text-white" />
                 </div>
               </div>
-
-              <div className="lg:col-span-2 space-y-12">
-                {activeProduct.category === 'aluminum' && activeProduct.comparison && (
-                  <div className="bg-primary rounded-none overflow-hidden shadow-2xl">
-                    <div className="p-12 border-b border-white/10 flex justify-between items-center">
-                      <h3 className="text-3xl font-black text-white uppercase tracking-tighter">System Comparison</h3>
-                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                        <Plus className="text-white" />
-                      </div>
-                    </div>
-                    <div className="overflow-x-auto p-12">
-                      <table className="w-full text-left">
-                        <thead>
-                          <tr className="text-white text-xs md:text-sm font-black uppercase tracking-widest border-b border-white/10">
-                            {activeProduct.comparison.headers.map((h, i) => (
-                              <th key={i} className="pb-8">{h}</th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody className="text-white/80">
-                          {activeProduct.comparison.rows.map((row, i) => (
-                            <tr key={i} className="border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors">
-                              <td className="py-8 font-black uppercase text-sm">{row.name}</td>
-                              {row.values.map((v, vi) => (
-                                <td key={vi} className="py-8 text-sm font-medium">{v}</td>
-                              ))}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                )}
-                
-                {/* Gallery Grid */}
-                <div className="grid grid-cols-2 gap-6">
-                  {activeProduct.gallery.slice(1, 3).map((img, i) => (
-                    <div key={i} className="aspect-[4/3] rounded-none overflow-hidden group relative bg-surface">
-                      <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <Maximize2 className="text-white" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div className="overflow-x-auto p-12">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="text-white text-xs md:text-sm font-black uppercase tracking-widest border-b border-white/10">
+                      {activeProduct.comparison.headers.map((h, i) => (
+                        <th key={i} className="pb-8">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody className="text-white/80">
+                    {activeProduct.comparison.rows.map((row, i) => (
+                      <tr key={i} className="border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors">
+                        <td className="py-8 font-black uppercase text-sm">{row.name}</td>
+                        {row.values.map((v, vi) => (
+                          <td key={vi} className="py-8 text-sm font-medium">{v}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
-          </section>
-        )}
+          )}
+        </section>
       </div>
     </div>
   );

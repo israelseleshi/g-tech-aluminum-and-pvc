@@ -11,6 +11,10 @@ interface DesignState {
   setLeadershipVariant: (variant: number) => void;
   projectListingVariant: number;
   setProjectListingVariant: (variant: number) => void;
+  separatorVariant: number;
+  setSeparatorVariant: (variant: number) => void;
+  parallaxVariant: number;
+  setParallaxVariant: (variant: number) => void;
 }
 
 export const useDesignStore = create<DesignState>((set) => ({
@@ -24,4 +28,8 @@ export const useDesignStore = create<DesignState>((set) => ({
   setLeadershipVariant: (variant: number) => set({ leadershipVariant: variant }),
   projectListingVariant: 1,
   setProjectListingVariant: (variant: number) => set({ projectListingVariant: variant }),
+  separatorVariant: 1,
+  setSeparatorVariant: (variant: number) => set({ separatorVariant: variant }),
+  parallaxVariant: 1,
+  setParallaxVariant: (variant: number) => set({ parallaxVariant: variant }),
 }));

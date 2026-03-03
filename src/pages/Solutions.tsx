@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Maximize, Layers, Shield, Zap, ArrowUpCircle, Factory, Beaker, ShieldAlert } from 'lucide-react';
 import { useDesignStore } from '../store/designStore';
 
+const Separator = () => (
+  <div className="w-full flex justify-center py-24">
+    <div 
+      className="h-[2px] w-4/5 max-w-4xl"
+      style={{ 
+        background: 'linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%)',
+        opacity: 0.3
+      }}
+    />
+  </div>
+);
+
 const STAGGER = {
   animate: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } }
 };
@@ -58,29 +70,32 @@ export function Solutions() {
     return (
       <motion.div variants={STAGGER} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="space-y-12 md:space-y-16">
         {partners.map((item, index) => (
-          <motion.div key={item.id} variants={CARD_VARIANT} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-            <div className={index % 2 !== 0 ? 'lg:order-2' : ''}>
-              <div className="flex items-center gap-4 mb-6 md:mb-8">
-                {item.icon}
+          <div key={item.id}>
+            <motion.div variants={CARD_VARIANT} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className={index % 2 !== 0 ? 'lg:order-2' : ''}>
+                <div className="flex items-center gap-4 mb-6 md:mb-8">
+                  {item.icon}
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-3 md:mb-4 tracking-tighter uppercase">{item.title}</h2>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted mb-4 md:mb-6 leading-tight font-medium tracking-tight">{item.description}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-6 md:mb-8">
+                  {item.specs.map((spec, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <div className="w-1 h-1 bg-accent rounded-full" />
+                      <span className="text-[10px] md:text-xs font-bold text-primary uppercase tracking-tighter">{spec}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link to={`/solutions/${item.id}`} className="btn-solid group w-full sm:w-fit text-center flex justify-center items-center">
+                  View products <ArrowRight size={16} className="ml-3 group-hover:translate-x-2 transition-transform" />
+                </Link>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-3 md:mb-4 tracking-tighter uppercase">{item.title}</h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted mb-4 md:mb-6 leading-tight font-medium tracking-tight">{item.description}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-6 md:mb-8">
-                {item.specs.map((spec, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div className="w-1 h-1 bg-accent rounded-full" />
-                    <span className="text-[10px] md:text-xs font-bold text-primary uppercase tracking-tighter">{spec}</span>
-                  </div>
-                ))}
+              <div className={`relative aspect-[4/3] overflow-hidden shadow-none ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
+                <img src={item.image} alt={item.brand} className="w-full h-full object-contain transition-transform duration-1000 hover:scale-105" />
               </div>
-              <Link to={`/solutions/${item.id}`} className="btn-solid group w-full sm:w-fit text-center flex justify-center items-center">
-                View products <ArrowRight size={16} className="ml-3 group-hover:translate-x-2 transition-transform" />
-              </Link>
-            </div>
-            <div className={`relative aspect-[4/3] overflow-hidden shadow-none ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
-              <img src={item.image} alt={item.brand} className="w-full h-full object-contain transition-transform duration-1000 hover:scale-105" />
-            </div>
-          </motion.div>
+            </motion.div>
+            {index < partners.length - 1 && <Separator />}
+          </div>
         ))}
       </motion.div>
     );

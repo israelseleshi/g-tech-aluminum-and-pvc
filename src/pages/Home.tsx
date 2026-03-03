@@ -1,7 +1,6 @@
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { ArrowRight, Box, Shield, Zap, Building2, Cpu, Globe, ArrowDown, Quote, Star, User, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useDesignStore } from '../store/designStore';
 import { useState, useEffect } from 'react';
 
 const testimonials = [
@@ -98,15 +97,6 @@ const testimonials = [
   }
 ];
 
-const generatorImageUrl = '/generator-3d-image.png';
-
-const FADE_UP = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }
-};
-
 const STAGGER = {
   animate: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } }
 };
@@ -118,9 +108,17 @@ const CARD_VARIANT = {
 };
 
 export function Home() {
-  const { scrollY } = useScroll();
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [heroSlide, setHeroSlide] = useState(0);
+
+  const goPrevHeroSlide = () => {
+    setHeroSlide((prev) => (prev - 1 + 3) % 3);
+  };
+
+  const goNextHeroSlide = () => {
+    setHeroSlide((prev) => (prev + 1) % 3);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -146,8 +144,12 @@ export function Home() {
     return () => clearInterval(interval);
   }, [totalPages]);
 
-  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroSlide((prev) => (prev + 1) % 3);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const Pagination = () => (
     <div className="flex justify-center items-center gap-6 mt-16">
@@ -223,54 +225,98 @@ export function Home() {
   };
 
   const renderHero = () => {
-    const heroData = {
-      tag: "Ethiopian Excellence",
-      title: <>G-TECH <br/>INDUSTRY.</>,
-      stats: [
-        { label: "Location", value: "Addis Ababa, ET" },
-        { label: "Specialization", value: "Aluminum & PVC" },
-        { label: "Established", value: "2010" }
-      ]
-    };
+    const slides = [
+      {
+        src: '/pictures-from-lorenzoline/Lorenzo_Products/alumunium-windows-and-doors.png',
+        alt: 'Aluminum Systems',
+        title: <>Aluminum <br />Systems</>,
+        description: 'Precision-engineered aluminum frames and profiles for windows, doors, curtain walls, and custom architectural applications.'
+      },
+      {
+        src: '/pictures-from-kernekasansor/Kernek_Products/elevator-3d-model.png',
+        alt: 'Elevator Systems',
+        title: <>Elevator <br />Systems</>,
+        description: 'Advanced elevator solutions designed for safety, comfort, and efficient vertical transportation in modern buildings.'
+      },
+      {
+        src: '/Yuchai 200kVA Industrial.png',
+        alt: 'Power Generator',
+        title: <>Power <br />Generation</>,
+        description: 'Reliable industrial generator systems delivering dependable power for commercial and mission-critical facilities.'
+      }
+    ];
 
     return (
-      <motion.section className="relative h-screen flex items-end pb-24 bg-black overflow-hidden">
-        <motion.div initial={{ scale: 1.2 }} animate={{ scale: 1 }} transition={{ duration: 2 }} className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=2000" className="w-full h-full object-cover opacity-60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-        </motion.div>
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
-          <div className="max-w-4xl">
-            <motion.div 
-              initial={{ x: -100, opacity: 0 }} 
-              animate={{ x: 0, opacity: 1 }} 
-              className="flex items-center gap-4 mb-6"
+      <motion.section className="relative min-h-[calc(100vh-4rem)] bg-[#f4f5f7] overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-[#f4f5f7] to-[#eceff3]" />
+        <div className="relative z-10 max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24 xl:px-28 w-full pt-32 md:pt-44 pb-24 md:pb-36">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 xl:gap-32 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative w-full"
             >
-              <div className="h-[1px] w-12 bg-accent" />
-              <span className="text-white text-xs font-black uppercase tracking-[0.5em]">{heroData.tag}</span>
+              <div className="relative w-full h-[46vh] sm:h-[54vh] lg:h-[70vh] flex items-center justify-center">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={slides[heroSlide]?.src}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    src={slides[heroSlide]?.src}
+                    alt={slides[heroSlide]?.alt}
+                    className="w-full h-full object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.25)]"
+                    referrerPolicy="no-referrer"
+                  />
+                </AnimatePresence>
+              </div>
             </motion.div>
-            <motion.h1 
-              initial={{ y: 50, opacity: 0 }} 
-              animate={{ y: 0, opacity: 1 }} 
-              transition={{ delay: 0.3 }} 
-              className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold text-white leading-[0.85] tracking-tighter mb-8 md:mb-12 uppercase"
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="max-w-2xl"
             >
-              {heroData.title}
-            </motion.h1>
-            <div className="flex flex-wrap gap-12">
-              {heroData.stats.map((stat, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={heroSlide}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + i * 0.1 }}
-                  className="space-y-2"
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold">{stat.label}</p>
-                  <p className="text-white font-bold">{stat.value}</p>
+                  <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary leading-[0.92] tracking-tighter mb-6 uppercase">
+                    {slides[heroSlide]?.title}
+                  </motion.h1>
+
+                  <motion.p className="text-muted text-base sm:text-lg md:text-xl font-medium leading-relaxed">
+                    {slides[heroSlide]?.description}
+                  </motion.p>
                 </motion.div>
-              ))}
-            </div>
+              </AnimatePresence>
+
+              <div className="flex items-center gap-3 mt-10">
+                <button
+                  type="button"
+                  onClick={goPrevHeroSlide}
+                  className="w-12 h-12 rounded-none border border-border bg-white/70 hover:bg-white flex items-center justify-center text-primary transition-colors"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <button
+                  type="button"
+                  onClick={goNextHeroSlide}
+                  className="w-12 h-12 rounded-none border border-border bg-white/70 hover:bg-white flex items-center justify-center text-primary transition-colors"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>

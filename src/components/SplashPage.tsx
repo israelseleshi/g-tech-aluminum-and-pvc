@@ -8,15 +8,31 @@ interface SplashPageProps {
 export function SplashPage({ onComplete }: SplashPageProps) {
   return (
     <motion.div
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      onAnimationComplete={() => {
-        // We'll use a timeout in the parent to trigger onComplete
+      initial={{ opacity: 1, backgroundColor: "rgba(255, 255, 255, 1)" }}
+      exit={{ 
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        transition: { 
+          duration: 0.8,
+          ease: [0.76, 0, 0.24, 1] 
+        }
       }}
-      className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center p-6"
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center p-6 origin-center"
     >
-      <div className="max-w-5xl w-full flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+      <motion.div 
+        className="max-w-5xl w-full flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-20"
+        initial={{ opacity: 1 }}
+        exit={{
+          scale: [1, 0.2, 0.15],
+          x: [0, -window.innerWidth * 0.4, -window.innerWidth * 0.42],
+          y: [0, -window.innerHeight * 0.45, -window.innerHeight * 0.46],
+          opacity: [1, 1, 1], // Keep fully visible during swoosh
+          transition: {
+            duration: 1.2,
+            times: [0, 0.85, 1],
+            ease: [0.76, 0, 0.24, 1]
+          }
+        }}
+      >
         {/* Logo Container */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -66,25 +82,7 @@ export function SplashPage({ onComplete }: SplashPageProps) {
           </motion.p>
         </div>
 
-        {/* Loading Bar */}
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ 
-            duration: 2, 
-            ease: "easeInOut",
-            delay: 0.2
-          }}
-          className="absolute bottom-0 left-0 h-1 bg-accent/20"
-        >
-          <motion.div 
-            className="h-full bg-accent"
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 2, ease: "easeInOut" }}
-          />
-        </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

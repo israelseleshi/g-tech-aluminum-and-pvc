@@ -139,12 +139,18 @@ export function Layout() {
 
     return (
       <div className="flex justify-between items-center w-full">
-        <div className="flex items-center flex-shrink gap-4 min-w-0">
-          <Link to="/" className="flex items-center gap-4 min-w-0">
+        <div className="flex items-center flex-shrink-0 gap-4 min-w-0">
+          <Link to="/" className="flex items-center gap-4 lg:gap-6 min-w-0">
             <img src={logoUrl} alt="G-TECH" className="h-16 lg:h-20 w-auto flex-shrink-0" />
-            <div className="hidden xl:flex flex-col min-w-0">
-              <span className={`text-lg lg:text-xl font-black tracking-tighter truncate ${useWhiteText ? 'text-white' : 'text-primary'}`}>G-TECH ALUMINUM & PVC PRODUCTION PLC</span>
-              <span className={`text-[10px] lg:text-[12px] font-bold tracking-tight mt-0 truncate ${useWhiteText ? 'text-white/80' : 'text-accent'}`}>Leading Ethiopian Industry Experience</span>
+            <div className="flex flex-col min-w-0">
+              <span className={`text-sm md:text-base lg:text-lg font-black tracking-tight leading-tight truncate ${useWhiteText ? 'text-white' : 'text-primary'}`}>
+                G-TECH ALUMINUM <span className="text-lg lg:text-xl">&</span>
+                <br />
+                PVC PRODUCTION PLC
+              </span>
+              <span className={`text-[8px] md:text-[9px] lg:text-[10px] font-bold tracking-tight mt-1 truncate ${useWhiteText ? 'text-white/80' : 'text-accent'}`}>
+                Leading Ethiopian Industry Experience
+              </span>
             </div>
           </Link>
         </div>

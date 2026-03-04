@@ -1,7 +1,10 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { GeneratorModel } from '../components/GeneratorModel';
+import { AluminumModel } from '../components/AluminumModel';
+import { ElevatorModel } from '../components/ElevatorModel';
 
 const testimonials = [
   {
@@ -145,10 +148,11 @@ export function Home() {
   }, [totalPages]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setHeroSlide((prev) => (prev + 1) % 3);
-    }, 5000);
-    return () => clearInterval(interval);
+    // Auto-sliding removed to allow full 3D immersion
+    // const interval = setInterval(() => {
+    //   setHeroSlide((prev) => (prev + 1) % 3);
+    // }, 5000);
+    // return () => clearInterval(interval);
   }, []);
 
   const Pagination = () => (
@@ -230,19 +234,25 @@ export function Home() {
         src: '/pictures-from-lorenzoline/Lorenzo_Products/alumunium-windows-and-doors.png',
         alt: 'Aluminum Systems',
         title: <>Aluminum <br />Systems</>,
-        description: 'Precision-engineered aluminum frames and profiles for windows, doors, curtain walls, and custom architectural applications.'
+        description: 'Precision-engineered aluminum frames and profiles for windows, doors, curtain walls, and custom architectural applications.',
+        is3D: true,
+        type: 'aluminum'
       },
       {
         src: '/pictures-from-kernekasansor/Kernek_Products/elevator-3d-model.png',
         alt: 'Elevator Systems',
         title: <>Elevator <br />Systems</>,
-        description: 'Advanced elevator solutions designed for safety, comfort, and efficient vertical transportation in modern buildings.'
+        description: 'Advanced elevator solutions designed for safety, comfort, and efficient vertical transportation in modern buildings.',
+        is3D: true,
+        type: 'elevator'
       },
       {
         src: '/Yuchai 200kVA Industrial.png',
         alt: 'Power Generator',
         title: <>Power <br />Generation</>,
-        description: 'Reliable industrial generator systems delivering dependable power for commercial and mission-critical facilities.'
+        description: 'Reliable industrial generator systems delivering dependable power for commercial and mission-critical facilities.',
+        is3D: true,
+        type: 'generator'
       }
     ];
 
@@ -257,19 +267,38 @@ export function Home() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="relative w-full"
             >
-              <div className="relative w-full h-[46vh] sm:h-[54vh] lg:h-[70vh] flex items-center justify-center">
+              <div className="relative w-full h-[45vh] sm:h-[55vh] md:h-[65vh] lg:h-[80vh] flex items-center justify-center">
                 <AnimatePresence mode="wait">
-                  <motion.img
-                    key={slides[heroSlide]?.src}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                    src={slides[heroSlide]?.src}
-                    alt={slides[heroSlide]?.alt}
-                    className="w-full h-full object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.25)]"
-                    referrerPolicy="no-referrer"
-                  />
+                  {slides[heroSlide]?.is3D ? (
+                    <motion.div
+                      key={slides[heroSlide]?.type}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 1.1 }}
+                      transition={{ duration: 0.8 }}
+                      className="w-full h-full lg:w-full lg:h-full"
+                    >
+                      {slides[heroSlide]?.type === 'generator' ? (
+                        <GeneratorModel />
+                      ) : slides[heroSlide]?.type === 'aluminum' ? (
+                        <AluminumModel />
+                      ) : (
+                        <ElevatorModel />
+                      )}
+                    </motion.div>
+                  ) : (
+                    <motion.img
+                      key={slides[heroSlide]?.src}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      src={slides[heroSlide]?.src}
+                      alt={slides[heroSlide]?.alt}
+                      className="w-full h-full object-contain drop-shadow-[0_30px_70px_rgba(15,23,42,0.25)]"
+                      referrerPolicy="no-referrer"
+                    />
+                  )}
                 </AnimatePresence>
               </div>
             </motion.div>

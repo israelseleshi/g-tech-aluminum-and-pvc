@@ -2,6 +2,9 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Maximize, Layers, Shield, Zap, ArrowUpCircle, Factory, Beaker, ShieldAlert } from 'lucide-react';
 import { useDesignStore } from '../store/designStore';
+import { GeneratorModel } from '../components/GeneratorModel';
+import { AluminumModel } from '../components/AluminumModel';
+import { ElevatorModel } from '../components/ElevatorModel';
 
 const Separator = () => (
   <div className="w-full flex justify-center py-24">
@@ -91,7 +94,21 @@ export function Solutions() {
                 </Link>
               </div>
               <div className={`relative aspect-[4/3] overflow-hidden shadow-none ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
-                <img src={item.image} alt={item.brand} className="w-full h-full object-contain transition-transform duration-1000 hover:scale-105" />
+                {item.id === 'gucbir-perkins-100' ? (
+                  <div className="w-full h-full scale-100 sm:scale-110 lg:scale-125">
+                    <GeneratorModel />
+                  </div>
+                ) : item.id === 'lorenzoline-70t' ? (
+                  <div className="w-full h-full scale-100 sm:scale-110 lg:scale-125">
+                    <AluminumModel />
+                  </div>
+                ) : item.id === 'kernek-mrl-luxury' ? (
+                  <div className="w-full h-full scale-100 sm:scale-110 lg:scale-125">
+                    <ElevatorModel />
+                  </div>
+                ) : (
+                  <img src={item.image} alt={item.brand} className="w-full h-full object-contain transition-transform duration-1000 hover:scale-105" />
+                )}
               </div>
             </motion.div>
             {index < partners.length - 1 && <Separator />}
